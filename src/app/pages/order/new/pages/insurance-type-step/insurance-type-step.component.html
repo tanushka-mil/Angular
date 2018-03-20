@@ -1,0 +1,8 @@
+<div class="list">
+    <div *ngFor="let value of componentValues"
+         class="list-item"
+         [ngClass]="{'active': newOrderService.newOrder.insuranceType === value}"
+         (click)="changeValue(value)">
+        {{value}}
+    </div>
+</div>

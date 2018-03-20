@@ -1,0 +1,9 @@
+<p class="text">Use one of our templates for your campaign or build it from scratch:</p>
+<div class="list">
+    <div *ngFor="let value of componentValues"
+         class="list-item"
+         [ngClass]="{'active': newOrderService.newOrder.selectTemplate === value}"
+         (click)="changeValue(value)">
+        {{value}}
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container registration-container">
+    <div>
+        <div class="logo"><h1>Logo</h1></div>
+
+        <div class="steps">
+            <a *ngFor="let page of newOrderService.pageList | keys"
+               [ngClass]="{'active': newOrderService.currentPageNum === page}"
+               class="step">
+                {{page}}
+            </a>
+        </div>
+
+
+        <div class="container">
+            <h3 class="sub-title">{{newOrderService.pageList[newOrderService.currentPageNum].title}}</h3>
+
+            <router-outlet></router-outlet>
+
+            <div class="navigation">
+
+                <button class="back-button"
+                        *ngIf="newOrderService.currentPageNum !== '1'"
+                        (click)="newOrderService.goBack()">
+                    back
+                </button>
+                <button class="next-button"
+                        [disabled]="!newOrderService.disabledButton"
+                        (click)="newOrderService.goNext()">
+                    next
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>

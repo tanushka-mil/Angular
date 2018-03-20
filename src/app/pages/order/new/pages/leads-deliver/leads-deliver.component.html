@@ -1,0 +1,14 @@
+<div class="list-checkbox">
+    <div *ngFor="let value of componentValues" class="list-item" (change)="changeValue(value)">
+        <label>
+            <input type="radio" [checked]="newOrderService.newOrder.leadsDeliver.type === value">
+            <span></span>
+            {{value}}
+        </label>
+
+        <div class="item" *ngIf="newOrderService.newOrder.leadsDeliver.type === value">
+            <p class="text">{{value}}</p>
+            <input [(ngModel)]="newOrderService.newOrder.leadsDeliver.value" type="text">
+        </div>
+    </div>
+</div>

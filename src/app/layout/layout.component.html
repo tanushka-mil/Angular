@@ -1,0 +1,37 @@
+<div class="container-fluid main-section">
+    <div class="row">
+        <div class="col-md-2">
+            Logo
+        </div>
+        <div class="col-md-2 col-md-offset-6">
+            Account Balance - $ 10`000.00
+        </div>
+        <div class="col-md-2">
+            <div class="user">
+                <a href="/" class="user-name">Admin Admin</a>
+                <div class="lists">
+                    <a (click)="userService.logOut()" class="item">Sign out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+
+            <ul class="nav">
+                <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+                <li><a routerLink="/orders" routerLinkActive="active">Orders</a></li>
+                <li><a routerLink="/" routerLinkActive="active">Reports</a></li>
+                <li><a routerLink="/" routerLinkActive="active">Calls</a></li>
+                <li><a routerLink="/" routerLinkActive="active">Invoices</a></li>
+                <li><a routerLink="/" routerLinkActive="active">My Profile</a></li>
+                <li><a routerLink="/registration" routerLinkActive="active">Registration</a></li>
+                <li><a routerLink="/login" routerLinkActive="active">login</a></li>
+            </ul>
+
+        </div>
+        <div class="col-md-10">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+.registration-container {
+    margin-top: 50px;
+
+    .container {
+        padding: 30px 40px;
+        box-sizing: border-box;
+        width: auto;
+        max-width: 750px;
+        border: 1px solid fade(black, 20%);
+    }
+}
+
+.logo,
+.sub-title {
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    width: auto;
+    max-width: 400px;
+
+    .step {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+        border-radius: 50%;
+        background-color: fade(black, 20%);
+        color: black;
+
+        &.active {
+            background-color: black;
+            color: white;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: fade(white, 80%);
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.next-button {
+    border: none;
+    text-transform: capitalize;
+    line-height: 50px;
+    padding: 0 35px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+
+    &[disabled] {
+        background-color: fade(black, 20%);
+        cursor: no-drop;
+    }
+}
+
+.back-button {
+    border: none;
+    text-transform: capitalize;
+    line-height: 50px;
+    padding: 0 35px;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+    order: 1;
+}
+

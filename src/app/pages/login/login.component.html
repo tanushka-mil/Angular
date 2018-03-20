@@ -1,0 +1,24 @@
+<div class="container login-container">
+    <div>
+        <div class="registration-logo"><h1>Logo</h1></div>
+        <div class="registration-form">
+            <h2>Login Page</h2>
+            <form (submit)="loginUser()">
+                <div class="form-rows">
+                    <label for="email">LOGIN</label>
+                    <div><input type="text" class="form-control" id="email" name="email" [(ngModel)]="email" placeholder="youremail@mail.com"></div>
+                </div>
+                <div class="form-rows">
+                    <label for="pass">PASSWORD</label>
+                    <div><input type="password" class="form-control" id="pass" name="password" [(ngModel)]="password" placeholder="******"></div>
+                </div>
+                <div class="form-rows">
+                    <button type="submit">Next</button>
+                </div>
+                <div class="form-rows">
+                    <a routerLink="/registration" routerLinkActive="active">REGISTRATION</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

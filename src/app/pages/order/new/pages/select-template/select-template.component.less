@@ -1,0 +1,28 @@
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 50px auto;
+    text-transform: uppercase;
+
+    &-item {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 120px;
+        height: 130px;
+        padding-bottom: 10px;
+        margin: 0 5px;
+        background-color: fade(black, 10%);
+        cursor: pointer;
+
+        &.active {
+            outline: 3px solid black;
+        }
+    }
+}
+
+.text {
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+<div class="container license-container">
+    <div>
+        <div class="registration-logo"><h1>Logo</h1></div>
+        <div class="registration-form">
+            <h2>Create your new account</h2>
+            <form [formGroup]="userForm" (submit)="registrationUser($event)">
+                <div class="form-rows">
+                    <label for="license">LICENSE NUMBER</label>
+                    <div>
+                        <input type="text" class="form-control"
+                               formControlName="licenseNumber"
+                               id="license"
+                               placeholder="License Number">
+                    </div>
+                    <bp-control-messages [control]="userForm.controls.licenseNumber"></bp-control-messages>
+                </div>
+                <div class="form-rows">
+                    <button [disabled]="!userForm.valid">Next</button>
+                </div>
+            </form>
+            <div class="form-rows">
+                <a routerLink="/" routerLinkActive="active">I don't have a License yet</a>
+            </div>
+        </div>
+    </div>
+</div>
+
